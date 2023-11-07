@@ -1,0 +1,92 @@
+/* Expanded menu */
+@import 'constants';
+$menu-trigger-padding: 2.6rem;
+$menu-trigger-bg-color: #fff;
+$menu-trigger-box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+$menu-trigger-transition: all 0.25s ease-in-out 0s;
+
+.menuTrigger {
+  display: inline-block;
+  width: 100%;
+  max-height: 0px;
+  background: $menu-trigger-bg-color;
+  box-shadow: $menu-trigger-box-shadow;
+  transition: $menu-trigger-transition;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.openMenuTrigger {
+  max-height: 600px;
+}
+
+.subMenu {
+  display: grid;
+  flex: 3;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 36px 0;
+}
+
+.mainArea {
+  position: relative;
+  grid-column: 1/span 3;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  color: $primary-color;
+  text-transform: uppercase;
+  gap: 10px;
+  z-index: 5;
+}
+
+.title {
+  color: $secondary-black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subtitle {
+  display: flex;
+  gap: 4px;
+}
+
+.gridItem a:hover {
+  color: $primary-color;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rightColumn {
+  position: relative;
+  flex: 1;
+  background-color: #FAF8F8;
+  padding: 50px 18px;
+  min-height: 240px;
+
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(246, 244, 244, 0.6);
+  }
+}
+
+.flex {
+  display: flex;
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.positionRelative {
+  position: relative;
+  z-index: 5;
+}
