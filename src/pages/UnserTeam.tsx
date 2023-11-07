@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/unserTeam.module.scss";
+import headerStyle from "@/styles/Header.module.scss";
 import Image from "next/image";
 import { GrPlayFill } from "react-icons/gr";
 import Modal from "@/components/Modal";
@@ -69,6 +70,36 @@ function UnserTeam() {
           </span>
         </div>
       </div>
+      <section>
+        <div className={styles.gastronoutes}>
+          <div className={styles.textSection}>
+            <h2 className={styles.mainHeadline}>
+              Gastronaut*innen [gastʀo’naut*innen]
+            </h2>
+            <div className={styles.description} style={{ textAlign: "left" }}>
+              Wer nach den Sternen greifen will, darf keine Flugangst haben.
+              Daher nennen wir uns „Gastronaut*innen“ – augenzwinkernd und mit
+              einem verschmitzten Lächeln, versteht sich. Gastronaut*innen sind
+              offen, tüfteln gerne und nehmen die Dinge selbst in die Hand –
+              aber zusammen sind sie am stärksten. Und obwohl jede*r hier
+              einzigartig ist und auch mal leidenschaftlich diskutiert, teilen
+              wir die gleichen Werte und eine gemeinsame Vision: eine bessere
+              und erfolgreichere Arbeitswelt von morgen.
+            </div>
+            <div className={headerStyle.user}>
+              <div className={headerStyle.loginButton}>Werde Gastronaut*in</div>
+            </div>
+          </div>
+          <div className={styles.bild}>
+            <Image
+              src="https://www.gastromatic.com/wp-content/uploads/2019/10/TeamILLU_FIN_FIN-600x480.png"
+              alt="people with dog"
+              height={340}
+              width={425}
+            />
+          </div>
+        </div>
+      </section>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <iframe

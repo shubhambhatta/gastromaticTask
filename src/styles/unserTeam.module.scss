@@ -12,7 +12,6 @@
         top: 0;
         left: 0;
         background-color: #e9f5f3;
-        // background-color: rgba(246, 244, 244, 0.6);
       }
 }
 .unserbody{
@@ -59,7 +58,18 @@
     line-height: 29px;
     letter-spacing: 0.17px;
 }
-
+.gastronoutes{
+    padding: 136px 30px 120px;
+    display: flex;
+    max-width: 940px;
+    margin: 0 auto;
+    align-items: center;
+}
+.textSection{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 .imageSection{
     position: relative;
     text-align: center;

@@ -3,16 +3,21 @@ $header-bg-color: #F0F8F7;
 $unser-team-header-bg-color: #E9F5F3;
 $header-hover-bg-color: #fff;
 
+.header.UnserTeam {
+  background-color : $unser-team-header-bg-color;
+}
 .header {
   background-color: $header-bg-color;
   color: $primary-black;
-
+  position: sticky;
+  top: 0;
+  z-index: 11;
   &:hover {
     background-color: $header-hover-bg-color;
   }
 }
-.header.UnserTeam {
-  background-color : $unser-team-header-bg-color;
+.header.scrolled{
+  background-color: #FFF;
 }
 
 .headerContainer {
@@ -76,6 +81,7 @@ $header-hover-bg-color: #fff;
     text-decoration: none;
     text-align: center;
     transition: 0.25s;
+    cursor: pointer;
 
     &:hover {
       background-color: $secondary-black;
