@@ -95,6 +95,13 @@ const ProductMenu = () => {
           Alle Integrationen an einem Ort. Erweitere gastromatic, um deine
           Prozesse vollständig abzubilden.
         </div>
+        <Image
+          src="https://www.gastromatic.com/wp-content/uploads/2023/10/2023_10_24_marketplace_illustration_final.png"
+          height={256}
+          width={213}
+          style={{ zIndex: 5 }}
+          alt="company names"
+        />
       </div>
     </div>
   );

@@ -6,9 +6,12 @@ import Image from "next/image";
 import ExpandHeader from "./ExpandHeader";
 import { useEffect, useRef, useState } from "react";
 import { ExtraNavSchema } from "./schema";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [expandNav, setExpandNav] = useState<ExtraNavSchema>(null);
+  const query = useRouter();
+  const pathname = query.pathname.replace("/", "");
 
   const selectRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -31,7 +34,7 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header} ref={selectRef}>
+    <header className={`${styles.header} ${styles[pathname]}`} ref={selectRef}>
       <div className={styles.headerContainer}>
         <div className={styles.logo}>
           <Link href="/">
@@ -72,7 +75,7 @@ const Header = () => {
             </span>
           </div>
           <div>
-            <Link href="/company">Unternehmen</Link>
+            <Link href="/UnserTeam">Unternehmen</Link>
           </div>
           <div>
             <Link href="/contact">

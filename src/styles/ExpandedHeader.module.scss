@@ -22,7 +22,7 @@ $menu-trigger-transition: all 0.25s ease-in-out 0s;
 
 .subMenu {
   display: grid;
-  flex: 3;
+  flex: 4;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: 36px 0;
@@ -36,6 +36,8 @@ $menu-trigger-transition: all 0.25s ease-in-out 0s;
   align-items: flex-end;
   color: $primary-color;
   text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
   gap: 10px;
   z-index: 5;
 }
@@ -49,6 +51,7 @@ $menu-trigger-transition: all 0.25s ease-in-out 0s;
 .subtitle {
   display: flex;
   gap: 4px;
+  line-height: 1.5;
 }
 
 .gridItem a:hover {
@@ -65,7 +68,7 @@ $menu-trigger-transition: all 0.25s ease-in-out 0s;
   position: relative;
   flex: 1;
   background-color: #FAF8F8;
-  padding: 50px 18px;
+  padding: 50px 42px 36px;
   min-height: 240px;
 
   &::before {
@@ -82,11 +85,21 @@ $menu-trigger-transition: all 0.25s ease-in-out 0s;
 
 .flex {
   display: flex;
-  width: 1140px;
+  width: $nav-flex-width;
   margin: 0 auto;
 }
+
 
 .positionRelative {
   position: relative;
   z-index: 5;
+}
+
+@media (max-width: #{$medium-breakpoint}){
+    .flex{
+        width: $nav-flex-medium-width;
+    }
+    .rightColumn{
+        padding: 50px 18px;
+    }
 }
